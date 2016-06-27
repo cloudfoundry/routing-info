@@ -3,7 +3,7 @@ package tcp_routes_test
 import (
 	"encoding/json"
 
-	"github.com/cloudfoundry-incubator/bbs/models"
+	"code.cloudfoundry.org/bbs/models"
 	"github.com/cloudfoundry-incubator/routing-info/tcp_routes"
 
 	. "github.com/onsi/ginkgo"

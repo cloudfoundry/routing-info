@@ -3,7 +3,7 @@ package tcp_routes
 import (
 	"encoding/json"
 
-	"github.com/cloudfoundry-incubator/bbs/models"
+	"code.cloudfoundry.org/bbs/models"
 )
 
 const TCP_ROUTER = "tcp-router"

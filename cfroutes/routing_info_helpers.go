@@ -11,10 +11,10 @@ const CF_ROUTER = "cf-router"
 type CFRoutes []CFRoute
 
 type CFRoute struct {
-	Hostnames       []string `json:"hostnames"`
-	Port            uint32   `json:"port"`
-	RouteServiceUrl string   `json:"route_service_url,omitempty"`
-	RouterGroupGuid string   `json:"router_group_guid,omitempty"`
+	Hostnames        []string `json:"hostnames"`
+	Port             uint32   `json:"port"`
+	RouteServiceUrl  string   `json:"route_service_url,omitempty"`
+	IsolationSegment string   `json:"isolation_segment,omitempty"`
 }
 
 func (c CFRoutes) RoutingInfo() models.Routes {

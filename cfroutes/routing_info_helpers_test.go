@@ -32,6 +32,7 @@ var _ = Describe("RoutingInfoHelpers", func() {
 			Hostnames:       []string{"foo3.example.com", "bar3.examaple.com"},
 			Port:            33333,
 			RouteServiceUrl: "rs.example.com",
+			Protocol:        "http2",
 		}
 
 		routes = cfroutes.CFRoutes{route1, route2, route3}

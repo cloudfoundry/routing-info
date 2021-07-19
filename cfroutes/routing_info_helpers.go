@@ -15,6 +15,7 @@ type CFRoute struct {
 	Port             uint32   `json:"port"`
 	RouteServiceUrl  string   `json:"route_service_url,omitempty"`
 	IsolationSegment string   `json:"isolation_segment,omitempty"`
+	Protocol         string   `json:"protocol,omitempty"`
 }
 
 func (c CFRoutes) RoutingInfo() models.Routes {

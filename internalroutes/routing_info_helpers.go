@@ -22,6 +22,25 @@ func (c InternalRoutes) RoutingInfo() models.Routes {
 	}
 }
 
+func (r InternalRoutes) Equal(o InternalRoutes) bool {
+	if len(r) != len(o) {
+		return false
+	}
+
+	rMap := make(map[string]bool, len(r))
+
+	for _, route := range r {
+		rMap[route.Hostname] = true
+	}
+
+	for _, route := range o {
+		if !rMap[route.Hostname] {
+			return false
+		}
+	}
+	return true
+}
+
 func InternalRoutesFromRoutingInfo(routingInfo models.Routes) (InternalRoutes, error) {
 	if routingInfo == nil {
 		return nil, nil

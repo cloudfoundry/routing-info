@@ -64,6 +64,38 @@ var _ = Describe("RoutingInfoHelpers", func() {
 		})
 	})
 
+	Describe("Equal", func() {
+		It("returns true when routes are the same", func() {
+			routes1 := internalroutes.InternalRoutes{{Hostname: "a"}, {Hostname: "b"}}
+			routes2 := internalroutes.InternalRoutes{{Hostname: "a"}, {Hostname: "b"}}
+			Expect(routes1.Equal(routes2)).To(BeTrue())
+		})
+
+		It("returns true when routes are in different order", func() {
+			routes1 := internalroutes.InternalRoutes{{Hostname: "a"}, {Hostname: "b"}}
+			routes2 := internalroutes.InternalRoutes{{Hostname: "b"}, {Hostname: "a"}}
+			Expect(routes1.Equal(routes2)).To(BeTrue())
+		})
+
+		It("returns true when routes are empty", func() {
+			routes1 := internalroutes.InternalRoutes{}
+			routes2 := internalroutes.InternalRoutes{}
+			Expect(routes1.Equal(routes2)).To(BeTrue())
+		})
+
+		It("returns false when routes have different sizes", func() {
+			routes1 := internalroutes.InternalRoutes{{Hostname: "a"}, {Hostname: "b"}, {Hostname: "c"}}
+			routes2 := internalroutes.InternalRoutes{{Hostname: "a"}, {Hostname: "b"}}
+			Expect(routes1.Equal(routes2)).To(BeFalse())
+		})
+
+		It("returns false when routes have different hostnames", func() {
+			routes1 := internalroutes.InternalRoutes{{Hostname: "a"}, {Hostname: "b"}}
+			routes2 := internalroutes.InternalRoutes{{Hostname: "a"}, {Hostname: "c"}}
+			Expect(routes1.Equal(routes2)).To(BeFalse())
+		})
+	})
+
 	Describe("InternalRoutesFromRoutingInfo", func() {
 		var (
 			routesResult    internalroutes.InternalRoutes

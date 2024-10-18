@@ -15,6 +15,7 @@ var _ = Describe("RoutingInfoHelpers", func() {
 		route1 cfroutes.CFRoute
 		route2 cfroutes.CFRoute
 		route3 cfroutes.CFRoute
+		route4 cfroutes.CFRoute
 
 		routes cfroutes.CFRoutes
 	)
@@ -34,8 +35,13 @@ var _ = Describe("RoutingInfoHelpers", func() {
 			RouteServiceUrl: "rs.example.com",
 			Protocol:        "http2",
 		}
+		route4 = cfroutes.CFRoute{
+			Hostnames: []string{"foo4.example.com", "bar4.examaple.com"},
+			Port:      44444,
+			Options:   json.RawMessage(`{"lb_algo":"least-connection"}`),
+		}
 
-		routes = cfroutes.CFRoutes{route1, route2, route3}
+		routes = cfroutes.CFRoutes{route1, route2, route3, route4}
 	})
 
 	Describe("RoutingInfo", func() {

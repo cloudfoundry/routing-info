@@ -105,7 +105,7 @@ var _ = Describe("RoutingInfoHelpers", func() {
 		)
 
 		JustBeforeEach(func() {
-			routesResult, conversionError = internalroutes.InternalRoutesFromRoutingInfo(routingInfo)
+			routesResult, conversionError = internalroutes.InternalRoutesFromRoutingInfo(&routingInfo)
 		})
 
 		Context("when internal routes are present in the routing info", func() {

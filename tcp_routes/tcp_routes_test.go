@@ -95,6 +95,23 @@ var _ = Describe("TcpRoutes", func() {
 				Expect(routesResult).To(Equal(routes))
 			})
 
+			Context("when backend SNI and terminate_frontend_tls are set", func() {
+				BeforeEach(func() {
+					sniHostname := "sni-hostname"
+					route1.SniHostname = &sniHostname
+					route1.TerminateFrontendTLS = true
+					routes = tcp_routes.TCPRoutes{route1}
+					routingInfo = routes.RoutingInfo()
+				})
+
+				It("correctly round-trips the SNI fields", func() {
+					Expect(conversionError).NotTo(HaveOccurred())
+					Expect(routesResult).To(Equal(routes))
+					Expect(*routesResult[0].SniHostname).To(Equal("sni-hostname"))
+					Expect(routesResult[0].TerminateFrontendTLS).To(BeTrue())
+				})
+			})
+
 			Context("when the TCP routes are nil", func() {
 				BeforeEach(func() {
 					routingInfo = &models.Routes{tcp_routes.TCP_ROUTER: nil}

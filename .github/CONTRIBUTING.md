@@ -43,15 +43,15 @@ cd ~/workspace
 git clone https://github.com/cloudfoundry/wg-app-platform-runtime-ci.git
 
 # clone repo
-git clone https://github.com/cloudfoundry/routing-release.git --recursive
-cd routing-release
+git clone https://github.com/cloudfoundry/diego-release.git --recursive
+cd diego-release
 ```
 
 Running Tests
 ---------------
 
 > [!TIP]
-> Running tests for this repo requires a DB flavor. The following scripts will default to mysql DB. Set DB environment variable for alternate DBs. Valid Options: mysql-8.0(or mysql),mysql-5.7,postgres
+> Running tests for this repo requires a DB flavor. The following scripts will default to mysql DB. Set DB environment variable for alternate DBs. Valid Options: mysql-8.0(or mysql),postgres
 
 - `./scripts/create-docker-container.bash`: This will create a docker container with appropriate mounts. This
 script can be used for interactive development with a long running container. 

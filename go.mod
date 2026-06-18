@@ -4,7 +4,6 @@ go 1.26
 
 replace code.cloudfoundry.org/bbs => ../bbs
 
-replace code.cloudfoundry.org/diego-db-helpers => /Users/gf009738/workspace/diego-db-helpers
 
 require (
 	code.cloudfoundry.org/bbs v0.0.0-00010101000000-000000000000

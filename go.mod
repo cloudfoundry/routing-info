@@ -1,18 +1,17 @@
 module code.cloudfoundry.org/routing-info
 
-go 1.26
-
-replace code.cloudfoundry.org/bbs => ../bbs
-
+go 1.26.2
 
 require (
-	code.cloudfoundry.org/bbs v0.0.0-00010101000000-000000000000
-	github.com/onsi/ginkgo/v2 v2.29.0
-	github.com/onsi/gomega v1.41.0
+	code.cloudfoundry.org/bbs/models v1.6.0
+	github.com/onsi/ginkgo/v2 v2.32.0
+	github.com/onsi/gomega v1.42.0
 )
 
 require (
-	code.cloudfoundry.org/lager/v3 v3.73.0 // indirect
+	code.cloudfoundry.org/bbs/encryption v1.7.0 // indirect
+	code.cloudfoundry.org/bbs/format v1.7.0 // indirect
+	code.cloudfoundry.org/lager/v3 v3.75.0 // indirect
 	github.com/Masterminds/semver/v3 v3.5.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
@@ -22,9 +21,9 @@ require (
 	github.com/openzipkin/zipkin-go v0.4.3 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
 	golang.org/x/mod v0.37.0 // indirect
-	golang.org/x/net v0.55.0 // indirect
+	golang.org/x/net v0.56.0 // indirect
 	golang.org/x/sync v0.21.0 // indirect
 	golang.org/x/sys v0.46.0 // indirect
 	golang.org/x/text v0.38.0 // indirect
-	golang.org/x/tools v0.45.0 // indirect
+	golang.org/x/tools v0.46.0 // indirect
 )

@@ -150,7 +150,7 @@ func InternalRoutesFromRoutingInfo(routingInfo Routes) (InternalRoutes, error) {
 
 // LRPUpdate carries internal-route and metric-tag updates for a running LRP.
 type LRPUpdate struct {
-	InstanceGUID   string            `json:"instance_guid"`
+	InstanceGUID string `json:"instance_guid"`
 	ActualLRPKey
 	InternalRoutes InternalRoutes    `json:"internal_routes"`
 	MetricTags     map[string]string `json:"metric_tags"`

@@ -41,12 +41,12 @@ func (r InternalRoutes) Equal(o InternalRoutes) bool {
 	return true
 }
 
-func InternalRoutesFromRoutingInfo(routingInfo models.Routes) (InternalRoutes, error) {
+func InternalRoutesFromRoutingInfo(routingInfo *models.Routes) (InternalRoutes, error) {
 	if routingInfo == nil {
 		return nil, nil
 	}
 
-	routes := routingInfo
+	routes := *routingInfo
 	data, found := routes[INTERNAL_ROUTER]
 	if !found {
 		return nil, nil

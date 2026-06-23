@@ -16,8 +16,8 @@ require (
 )
 
 require (
-	code.cloudfoundry.org/bbs/encryption v0.0.0 // indirect
-	code.cloudfoundry.org/bbs/format v0.0.0 // indirect
+	code.cloudfoundry.org/bbs/encryption v1.6.0 // indirect
+	code.cloudfoundry.org/bbs/format v1.6.0 // indirect
 	code.cloudfoundry.org/lager/v3 v3.74.0 // indirect
 	github.com/Masterminds/semver/v3 v3.5.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect

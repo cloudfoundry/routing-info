@@ -43,8 +43,8 @@ cd ~/workspace
 git clone https://github.com/cloudfoundry/wg-app-platform-runtime-ci.git
 
 # clone repo
-git clone https://github.com/cloudfoundry/routing-info.git --recursive
-cd routing-info
+git clone https://github.com/cloudfoundry/<THIS_REPO>.git --recursive
+cd <THIS_REPO>
 ```
 
 Running Tests

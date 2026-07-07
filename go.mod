@@ -11,7 +11,7 @@ require (
 require (
 	code.cloudfoundry.org/bbs/encryption v1.9.0 // indirect
 	code.cloudfoundry.org/bbs/format v1.9.0 // indirect
-	code.cloudfoundry.org/lager/v3 v3.75.0 // indirect
+	code.cloudfoundry.org/lager/v3 v3.76.0 // indirect
 	github.com/Masterminds/semver/v3 v3.5.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
@@ -24,6 +24,6 @@ require (
 	golang.org/x/net v0.56.0 // indirect
 	golang.org/x/sync v0.21.0 // indirect
 	golang.org/x/sys v0.46.0 // indirect
-	golang.org/x/text v0.38.0 // indirect
+	golang.org/x/text v0.39.0 // indirect
 	golang.org/x/tools v0.47.0 // indirect
 )

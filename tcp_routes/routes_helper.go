@@ -16,6 +16,7 @@ type TCPRoute struct {
 	ContainerPort        uint32  `json:"container_port"`
 	SniHostname          *string `json:"backend_sni_hostname,omitempty"`
 	TerminateFrontendTLS bool    `json:"terminate_frontend_tls,omitempty"`
+	EnableBackendMTLS    bool    `json:"enable_backend_mtls,omitempty"`
 }
 
 func (c TCPRoutes) RoutingInfo() *models.Routes {

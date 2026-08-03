@@ -112,6 +112,20 @@ var _ = Describe("TcpRoutes", func() {
 				})
 			})
 
+			Context("when enable_backend_mtls is set", func() {
+				BeforeEach(func() {
+					route1.EnableBackendMTLS = true
+					routes = tcp_routes.TCPRoutes{route1}
+					routingInfo = routes.RoutingInfo()
+				})
+
+				It("correctly round-trips the field", func() {
+					Expect(conversionError).NotTo(HaveOccurred())
+					Expect(routesResult).To(Equal(routes))
+					Expect(routesResult[0].EnableBackendMTLS).To(BeTrue())
+				})
+			})
+
 			Context("when the TCP routes are nil", func() {
 				BeforeEach(func() {
 					routingInfo = &models.Routes{tcp_routes.TCP_ROUTER: nil}

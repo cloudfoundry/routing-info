@@ -4,14 +4,14 @@ go 1.26.2
 
 require (
 	code.cloudfoundry.org/bbs/models v1.8.0
-	github.com/onsi/ginkgo/v2 v2.32.0
+	github.com/onsi/ginkgo/v2 v2.32.1
 	github.com/onsi/gomega v1.42.1
 )
 
 require (
 	code.cloudfoundry.org/bbs/encryption v1.9.0 // indirect
 	code.cloudfoundry.org/bbs/format v1.9.0 // indirect
-	code.cloudfoundry.org/lager/v3 v3.80.0 // indirect
+	code.cloudfoundry.org/lager/v3 v3.81.0 // indirect
 	github.com/Masterminds/semver/v3 v3.5.0 // indirect
 	github.com/go-logr/logr v1.4.4 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
@@ -20,7 +20,7 @@ require (
 	github.com/google/pprof v0.0.0-20260802141513-ef3492d7dac3 // indirect
 	github.com/openzipkin/zipkin-go v0.4.3 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
-	golang.org/x/mod v0.38.0 // indirect
+	golang.org/x/mod v0.39.0 // indirect
 	golang.org/x/net v0.57.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
 	golang.org/x/sys v0.47.0 // indirect
